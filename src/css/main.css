@@ -1,0 +1,21 @@
+body {
+    padding-top: 50px; /* ナビゲーションバーの高さに応じて調整 */
+}
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+.ball {
+  width: 80px; /* 画像の幅に合わせて調整 */
+  height: 80px; /* 画像の高さに合わせて調整 */
+  position: absolute;
+}
+
+.ball img {
+  width: 100%;
+  height: 100%;
+}
