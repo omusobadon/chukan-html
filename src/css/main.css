@@ -28,3 +28,10 @@ html {
 .list-group-item[aria-expanded="true"] .fas {
   transform: rotate(180deg);
 }
+
+.navbar-brand {
+  background: url("../img/オムそば丼キャラ切り抜き.png") no-repeat left center;
+  background-size: contain;
+  height: 50px;
+  width: 100px;
+}

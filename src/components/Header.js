@@ -3,11 +3,7 @@ const headerTemplate = `
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light bg-opacity-50 fixed-top">
         <div class="container">
-          <img
-            class="navbar-brand"
-            href="./index.html"
-            src="./src/img/オムそば丼キャラ切り抜き.png"
-          ></img>
+          <a class="navbar-brand" href="./index.html"></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -20,7 +16,7 @@ const headerTemplate = `
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-3 gap-4">
+            <ul class="navbar-nav gap-4">
               <li class="nav-item">
                 <a
                   class="nav-link active"
@@ -52,20 +48,7 @@ const headerTemplate = `
           </div>
         </div>
       </nav>
-    </div>
-    <style>
-    .headers img{
-      max-width: 5%;
-      max-height: 5%;
-    }
-    
-    @media screen and (max-width: 976px) {
-      .headers img{
-        max-width: 13%;
-        max-height: 13%;
-      }
-    }
-    </style>    
+    </div>    
   </header>
 `;
 
