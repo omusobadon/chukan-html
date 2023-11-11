@@ -53,6 +53,19 @@ const headerTemplate = `
         </div>
       </nav>
     </div>
+    <style>
+    .headers img{
+      max-width: 5%;
+      max-height: 5%;
+    }
+    
+    @media screen and (max-width: 976px) {
+      .headers img{
+        max-width: 13%;
+        max-height: 13%;
+      }
+    }
+    </style>    
   </header>
 `;
 

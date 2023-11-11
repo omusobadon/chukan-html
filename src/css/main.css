@@ -9,17 +9,6 @@ html {
   height: 100%;
 }
 
-.headers img{
-  max-width: 5%;
-  max-height: 5%;
-}
-
-@media screen and (max-width: 976px) {
-  .headers img{
-    max-width: 13%;
-    max-height: 13%;
-  }
-}
 
 .ball {
   width: 80px; /* 画像の幅に合わせて調整 */
