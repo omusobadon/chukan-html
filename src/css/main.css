@@ -9,6 +9,18 @@ html {
   height: 100%;
 }
 
+header img{
+  max-width: 5%;
+  max-height: 5%;
+}
+
+@media screen and (max-width: 768px) {
+  header img{
+    max-width: 15%;
+    max-height: 15%;
+  }
+}
+
 .ball {
   width: 80px; /* 画像の幅に合わせて調整 */
   height: 80px; /* 画像の高さに合わせて調整 */
@@ -20,15 +32,10 @@ html {
   height: 100%;
 }
 
-/* pulldown animation */
-.dropdown-toggle::after {
-  display: none; /* Bootstrapのデフォルトの矢印を非表示にする */
-}
-
-.dropdown-toggle .fas {
+.list-group-item .fas {
   transition: transform 0.3s ease;
 }
 
-.dropdown.show .dropdown-toggle .fas {
-  transform: rotate(180deg); /* メニューが開いたときにアイコンを180度回転 */
+.list-group-item[aria-expanded="true"] .fas {
+  transform: rotate(180deg);
 }

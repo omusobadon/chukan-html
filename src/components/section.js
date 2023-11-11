@@ -17,9 +17,11 @@ const allMenuItems = [
 
 function createMenuItem(href, text, controls) {
   return `
-      <a href="${href}" class="list-group-item list-group-item-action fs-5" data-bs-toggle="collapse" aria-expanded="false" aria-controls="${controls}">
-        ${text}
-      </a>
+  <a href="${href}" class="list-group-item list-group-item-action fs-5" data-bs-toggle="collapse" aria-expanded="false" aria-controls="${controls}">
+  ${text}
+  <i class="fas fa-chevron-down float-end"></i>
+</a>
+
     `;
 }
 

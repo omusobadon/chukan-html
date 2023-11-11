@@ -1,21 +1,13 @@
-<!-- FILEPATH: /C:/Users/yazoy/Desktop/jec-sotuken/chukan/Menber.html -->
-
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Member List</title>
-    <link rel="stylesheet" href="./src/css/main.css" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./src/css/bootstrap.min.css" />
-  </head>
+const headerTemplate = `
   <header>
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light bg-opacity-50 fixed-top">
         <div class="container">
-          <img class="navbar-brand" href="./index.html" src="./src/img/オムそば丼キャラ切り抜き.png"></img>
+          <img
+            class="navbar-brand"
+            href="./index.html"
+            src="./src/img/オムそば丼キャラ切り抜き.png"
+          ></img>
           <button
             class="navbar-toggler"
             type="button"
@@ -34,24 +26,27 @@
                   class="nav-link active"
                   aria-current="page"
                   href="./index.html"
-                  >ホーム</a
                 >
+                  ホーム
+                </a>
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link active"
                   aria-current="page"
                   href="./Docs.html"
-                  >Docs</a
                 >
+                  Docs
+                </a>
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link active"
                   aria-current="page"
                   href="./Member.html"
-                  >メンバー詳細</a
                 >
+                  メンバー詳細
+                </a>
               </li>
             </ul>
           </div>
@@ -59,13 +54,11 @@
       </nav>
     </div>
   </header>
-  <body class="text-center">
-    </div>
-    <div class="container">
-      <h1 class="text-center my-5">Member List</h1>
-      
-    </div>
-    <!-- Bootstrap JS -->
-    <script src="./src/js/boostrap/bootstrap.min.js"></script>
-  </body>
-</html>
+`;
+
+function loadHeader() {
+  document.getElementById("header-container").innerHTML = headerTemplate;
+}
+
+// ページ読み込み時にヘッダーを挿入
+document.addEventListener("DOMContentLoaded", loadHeader);
