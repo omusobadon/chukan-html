@@ -1,28 +1,28 @@
 function createBall(id) {
+  const element = document.getElementById(id);
+  const ballSize = 80; // CSSで設定されたボールのサイズに合わせて調整
   return {
-    element: document.getElementById(id),
-    x: Math.random() * window.innerWidth,
-    y: Math.random() * window.innerHeight,
+    element: element,
+    x: Math.random() * (window.innerWidth - ballSize),
+    y: Math.random() * (window.innerHeight - ballSize),
     dx: (Math.random() - 0.5) * 4,
     dy: (Math.random() - 0.5) * 4,
     rotation: 0,
   };
 }
 
+
 const balls = [createBall("ball1"), createBall("ball2"), createBall("ball3")];
 
 function update() {
   balls.forEach((ball) => {
-    if (
-      ball.x + ball.dx > window.innerWidth - ball.element.offsetWidth ||
-      ball.x + ball.dx < 0
-    ) {
+    const ballWidth = ball.element.offsetWidth;
+    const ballHeight = ball.element.offsetHeight;
+
+    if (ball.x + ball.dx > window.innerWidth - ballWidth || ball.x + ball.dx < 0) {
       ball.dx = -ball.dx;
     }
-    if (
-      ball.y + ball.dy > window.innerHeight - ball.element.offsetHeight ||
-      ball.y + ball.dy < 0
-    ) {
+    if (ball.y + ball.dy > window.innerHeight - ballHeight || ball.y + ball.dy < 0) {
       ball.dy = -ball.dy;
     }
 

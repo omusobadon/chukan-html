@@ -1,5 +1,6 @@
 body {
   padding-top: 50px; /* ナビゲーションバーの高さに応じて調整 */
+  overflow: hidden;
 }
 
 html {
