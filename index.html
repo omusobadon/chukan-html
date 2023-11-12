@@ -7,20 +7,22 @@
     <title>オムそば丼オフィシャルサイト</title>
     <link rel="stylesheet" href="./src/css/main.css" />
     <link rel="stylesheet" href="./src/css/bootstrap.min.css" />
+    <style>
+      body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin-top: 100px;
+      }
+    </style>
+    <script src="./src/js/ball.js"></script>
   </head>
-  <div id="header-container" class="headers"></div>
-  <body class="text-center mt-5">
-    <div id="ball1" class="ball">
-      <img src="./src/img/オムそば丼キャラ切り抜き.png" alt="Ball Image 1" />
-    </div>
-    <div id="ball2" class="ball">
-      <img src="./src/img/オムそば丼キャラ切り抜き.png" alt="Ball Image 2" />
-    </div>
-    <div id="ball3" class="ball">
-      <img src="./src/img/オムそば丼キャラ切り抜き.png" alt="Ball Image 3" />
-    </div>
 
-    <div class="container mt-5">
+  <div id="header-container" class="headers"></div>
+  <canvas id="myCanvas" class="mycanvas" width="480" height="320"></canvas>
+    <!-- ここにJavaScriptで生成されるボールが追加されます -->
+  </div>
+  <body class="text-center">
+    <div class="container">
       <div class="row">
         <div class="col-md-6">
           <div class="card">
@@ -45,14 +47,13 @@
               <p class="card-body">
                 予約システムの基盤となるものがGithubやGitlabなどのリポジトリサイトにオープンソースなどに載っていないかつ出来合い品を売っているが基盤を売っていないところが多かったため、誰でも拡張できる予約システム基盤を作るのが目的です
               </p>
-              <a href="#" class="btn btn-primary">詳細を見る</a>
+              <a href="./Docs.html" class="btn btn-primary">詳細を見る</a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <script src="./src/js/switch-img.js"></script>
-    <script src="./src/js/ball.js"></script>
     <script src="./src/js/boostrap/bootstrap.bundle.min.js"></script>
     <script>
       document.addEventListener("click", function (events) {
