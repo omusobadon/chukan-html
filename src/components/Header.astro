@@ -69,8 +69,10 @@ const { homel, docsl, membersl } = Astro.props;
     const menuButton = document.getElementById('menu-button');
     const navbar = document.getElementById('navbar-default');
 
-    menuButton.addEventListener('click', function () {
-      navbar.classList.toggle('hidden');
-    });
+    if (menuButton && navbar) {
+      menuButton.addEventListener('click', function () {
+        navbar.classList.toggle('hidden');
+      });
+    }
   });
 </script>

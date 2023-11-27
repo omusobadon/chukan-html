@@ -1,12 +1,20 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-
 import tailwind from "@astrojs/tailwind";
+
+import relativeLinks from "astro-relative-links";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight({
     title: 'オムそば丼',
+    logo: {
+      src: './public/オムそば丼キャラ切り抜き.png',
+    },
+    customCss: [
+      // Tailwindのベーススタイルへのパス
+      './src/tailwind.css',
+    ],
     social: {
       github: 'https://github.com/omusobadon'
     },
@@ -21,5 +29,5 @@ export default defineConfig({
         directory: 'reference'
       }
     }]
-  }), tailwind()]
+  }), tailwind({applyBaseStyles: false}), relativeLinks()]
 });
