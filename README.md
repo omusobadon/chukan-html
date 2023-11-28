@@ -7,6 +7,7 @@ pnpm install
 ```
 starlightをrelativeURLに対応させる
 以下のファイルにアクセス
+
 node_modules\@astrojs\starlight\components\SidebarSublist.astro
 ```
 18行目ぐらい
