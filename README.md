@@ -23,9 +23,13 @@ pnpm build
 
 ## スライドの編集
 .hugo/contentの中に作りたいスライドのフォルダを作成し
+
 フォルダの中に_index.mdを作ります。
+
 _index.mdを編集するとスライドができます
+
 編集のやり方は以下のURLを参照
+
 https://zatsugaku-engineer.com/static/reveal-js/index.html
 
 ## スライドのビルドのやり方
