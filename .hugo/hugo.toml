@@ -1,12 +1,9 @@
-baseURL = './'
+baseURL = '/'
 relativeURLs = true
 languageCode = 'en-us'
 title = 'オムそば丼スライドサイト'
 theme = ["github.com/dzello/reveal-hugo"]
 publishDir = "../dist/slides"
-[markup]
-  [markup.highlight]
-    style = 'monokai'
 
 [markup.goldmark.renderer]
 unsafe = true
@@ -15,4 +12,3 @@ unsafe = true
 baseName = "index"
 mediaType = "text/html"
 isHTML = true
-

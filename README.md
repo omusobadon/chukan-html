@@ -22,27 +22,27 @@ pnpm build
 ```
 
 ## スライドの編集
-.hugo/contentの中に作りたいスライドのフォルダを作成し
+slide-content/contentの中に作りたいスライドのフォルダを作成し
 
 フォルダの中に_index.mdを作ります。
 
 _index.mdを編集するとスライドができます
 
-編集のやり方は以下のURLを参照
+編集のやり方は以下のURLを参照（英語だけど）
 
-https://zatsugaku-engineer.com/static/reveal-js/index.html
+https://reveal-hugo.dzello.com/
 
-vscode-revealってやつ入れると結構やりやすい
+```
+hugo server
+```
 
-![image](https://github.com/omusobadon/chukan-html/assets/109458504/8e775193-7202-43e9-abc8-27769c44c66a)
-
-![image](https://github.com/omusobadon/chukan-html/assets/109458504/9ccaaea4-9c0b-4d49-8675-4a90051d7cad)
+hugo serverでlocalhost:1313で見ながら編集すると変更がリアルタイムで見れてやりやすいよ
 
 ## スライドのビルドのやり方
 hugoがインストールされているのが前提条件で以下を実行
 ディレクトリを移動
 ```
-cd .hugo/
+cd slide-content/
 ```
 hugoでビルドを開始
 ```
