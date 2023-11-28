@@ -32,6 +32,12 @@ _index.mdを編集するとスライドができます
 
 https://zatsugaku-engineer.com/static/reveal-js/index.html
 
+vscode-revealってやつ入れると結構やりやすい
+
+![image](https://github.com/omusobadon/chukan-html/assets/109458504/8e775193-7202-43e9-abc8-27769c44c66a)
+
+![image](https://github.com/omusobadon/chukan-html/assets/109458504/9ccaaea4-9c0b-4d49-8675-4a90051d7cad)
+
 ## スライドのビルドのやり方
 hugoがインストールされているのが前提条件で以下を実行
 ディレクトリを移動
