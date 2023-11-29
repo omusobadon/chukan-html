@@ -49,3 +49,8 @@ hugoでビルドを開始
 ```
 hugo
 ```
+
+
+![オムそば丼キャラ切り抜き](https://github.com/omusobadon/chukan-html/assets/109458504/e259ac1d-4b0f-4a64-9d26-fe1f37ef287c)
+
+
