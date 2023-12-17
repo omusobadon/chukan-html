@@ -1,87 +1,88 @@
 +++
-title = "環境構築方法"
+title = "APIサーバ構築"
 outputs = ["Reveal"]
 +++
 
-## 環境構築方法
+## APIサーバ構築
+
 ---
+### 1. API処理の内容
+- 予約処理  
+（在庫情報のGET、注文情報のPOST）  
 
-### 1. クローンの生成
-```shell
-    git clone https://github.com/omusobadon/Go_APIServer.git
-```
+- 在庫管理  
+（在庫情報の更新・挿入・削除）  
+
+- 予約管理  
+（予約の終了、キャンセル処理）  
+
+メインとなる予約処理について説明
+
 ---
+### 2. 予約処理の流れ
+1. /get で在庫情報を取得
+2. /post が注文を待ち受ける
+3. /post が注文を受け取ったら処理
+4. 処理の結果をレスポンスで返す
 
-### 2. 環境変数ファイルの作成
-    Discordの GO-API repo の環境変数ファイルを Go_APIServer/ へコピー
+- APIの動作イメージ
+<img src="str.png" width="80%">
+
 ---
+### 3. 予約処理結果
+- 実際の予約処理を行った結果を示す
 
-### 3. Prisma-Client-Goのインストール
-```shell
-    go get github.com/steebchen/prisma-client-go
-```
+- POSTの送信のためPostmanを使用  
+（HTTPリクエストの送信とそれに対するレスポンスを受信できるソフトウェア）
+
 ---
+- Stock（在庫）テーブル
+<img src="Stock1.png" width="100%">
 
-### 4. /Go_APIServer内で以下のコマンドを実行してDBを同期（DB操作用のパッケージが生成される）
-```shell
-    go run github.com/steebchen/prisma-client-go db push
-```
----
-
-## ファイル一覧
-- db/             prisma-client-goが作成したフォルダ。DB操作用のパッケージ等
-- Go_APIServer    APIServerの本体
-- GetTime         時刻同期処理
-- schema          prismaの設定ファイル。DBのURLやテーブルの定義など
-- TableEditer     APIServerから実行されるテーブル編集用のメソッド群
-- TableMemo       作成するテーブルのメモ
-- Tables          各テーブル用の構造体のまとめ
-- test            テスト用
----
-
-
-## POST /post
-- POSTされた注文情報を取得して注文処理
-- json形式
---
+- 以下のjsonをPOSTして注文
 ```json
 {
-    "id": 1,
-    "customer": 1,
-    "product": 1,
-    "start": "2021-01-01T10:10:00+09:00",
-    "end": "2021-01-01T10:10:00+09:00",
-    "num": 1
+    "customer": 777,
+    "product": 2,
+    "start": "2023-11-10T10:10:00+09:00",
+    "end": "2023-11-10T18:10:00+09:00",
+    "num": 5
 }
 ```
----
-
-{{% section %}}
-## POST /edit
-- 管理用
-- POSTされたテーブル編集情報を取得して各テーブルを編集
-- Type  1: Update, 2: Insert, 3: Delete
-- Table テーブル名
-- Info  更新内容
-
-下にコードがあります。
-
 
 ---
-json形式
-
-```json
-{
-    "type": 1,
-    "table": "stock",
-    "info": {
-        "id": 1,
-        "name": "car1",
-        "num": 2
-    }
-}
-```
-{{% /section %}}
+- 注文処理後にレスポンスが返される
+- 正常に注文処理が行われたことが分かる
+<img src="Res1_status.png" width="40%">
+<br>
+<img src="Res1_body.png" width="50%">
 
 ---
+- 注文後のStock（在庫）テーブル
+<img src="Stock2.png" width="100%">
+
+- サーバ側のコンソール画面
+<img src="Console1.png" width="100%">
+
+---
+### エラー処理
+- 例）注文数が在庫数よりも多い場合
+- エラーコードとメッセージが返される
+<img src="Res2_status.png" width="40%">
+<br>
+<img src="Res2_body.png" width="50%">
+
+---
+### 4. 今後の課題
+- フロントエンドとの連携
+
+- 予約処理の時間に関する処理  
+（予約間のインターバルの設定など）
+
+- 予約料金の計算処理
+
+- まだソフトウェアをコンテナ化できていない。
+
+---
+
 ご清聴ありがとうございました

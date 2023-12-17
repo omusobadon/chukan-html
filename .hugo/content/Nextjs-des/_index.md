@@ -1,13 +1,44 @@
 +++
-title = "Nextjsの説明"
+title = "フロントエンドについて（Next.js）"
 outputs = ["Reveal"]
 +++
 
-# Hello world!
+# フロントエンド開発
+---
+### 領域
 
-This is my first slide.
+<img src="./スクショ１.png">
 
 ---
-# Hello world!2
 
-This is my first slide.
+## 1.ユーザからのアクセスを処理
+---
+
+### 処理の流れ
+
+<img src="./流れ.png">
+
+---
+
+- データベースに格納されるデータの型
+
+ <img src="./DB.png" width="75%">
+
+- ユーザからのアクセス(入力)で受け取る型
+```
+ export interface OrderPost {
+    customer: number;
+    product: number; 
+    start: string; end: string; 
+    num: number;
+}
+```
+---
+
+ - API先を指定してjson形式にコンパイル
+
+ <img src="gazou.png" width="75%">
+
+---
+
+### ご清聴ありがとうございました。
