@@ -11,6 +11,10 @@ if not exist "%sourceFile%" (
 
 PowerShell -Command "(Get-Content '%sourceFile%') -replace 'href={entry\.href}', '%replaceString%' | Set-Content '%sourceFile%'"
 
+pnpm i astro-relative-links
+
+pnpm up
+
 pnpm build
 
 cd .hugo
