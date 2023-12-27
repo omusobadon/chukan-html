@@ -15,23 +15,19 @@ if not exist "%sourceFile%" (
     goto :eof
 )
 
-
 if not exist "%sourceFile2%" (
     echo Source file not found: %sourceFile2%
     goto :eof
 )
 
-
 PowerShell -Command "(Get-Content '%sourceFile%') -replace 'href={entry.href}', '%replaceString%' | Set-Content '%sourceFile%'"
-
 PowerShell -Command "(Get-Content '%sourceFile3%') -replace 'href={prev.href}', '%prev%' | Set-Content '%sourceFile3%'"
-PowerShell -Command "(Get-Content '%sourceFile3%') -replace 'href={next.href}', '%replaceString%' | Set-Content '%sourceFile3%'"
+PowerShell -Command "(Get-Content '%sourceFile3%') -replace 'href={next.href}', '%next%' | Set-Content '%sourceFile3%'"
+PowerShell -Command "(Get-Content '%sourceFile2%') -replace '{outDirPath}', '%replaceString2%' | Set-Content '%sourceFile2%'"
 
 pnpm i astro-relative-links
 
 pnpm up
-
-PowerShell -Command "(Get-Content '%sourceFile2%') -replace '{outDirPath}', '%replaceString2%' | Set-Content '%sourceFile2%'"
 
 pnpm build
 
