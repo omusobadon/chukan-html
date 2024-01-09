@@ -1,5 +1,5 @@
 +++
-title = "APIサーバ構築"
+title = "APIサーバ構築(中間発表資料)"
 outputs = ["Reveal"]
 +++
 

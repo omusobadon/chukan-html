@@ -1,5 +1,5 @@
 +++
-title = "フロントエンドについて（Next.js）"
+title = "フロントエンドについて(中間発表資料)"
 outputs = ["Reveal"]
 +++
 

@@ -21,12 +21,24 @@
           </li>
           <li>
             <a href="../guides/1_getstart/index.html">docs</a>
-
+          </li>
         </nav>
       </header>
       <div style="margin: 2rem 0">
+        {{ $allPages := .Pages }} {{ $regularPages := slice }} {{
+        $presentationPages := slice }} {{ range $allPages }} {{ if
+        strings.HasSuffix .Title "(中間発表資料)" }} {{ $presentationPages =
+        $presentationPages | append . }} {{ else }} {{ $regularPages =
+        $regularPages | append . }} {{ end }} {{ end }}
+
         <ul>
-          {{ range .Pages }}
+          <h3>最終発表資料</h3>
+          {{ range $regularPages }}
+          <li><a href="{{ .Permalink }}index.html">{{ .Title }}</a></li>
+          {{ end }}
+          <h3>以下、中間発表資料</h3>
+          {{ range $presentationPages }}
+
           <li>
             <a href="{{ .Permalink }}index.html">{{ .Title }}</a>
           </li>
