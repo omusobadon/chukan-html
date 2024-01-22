@@ -11,10 +11,6 @@ outputs = ["Reveal"]
 
 ---
 
-  <img src="./オムそば丼予約システム.png"/>
-
----
-
 {{% section %}}
 
 ## 全体設計
@@ -363,6 +359,7 @@ Pod が起動している
 ---
 
 ### 予約の流れ
+
 <img src="Stream.png" />
 
 
