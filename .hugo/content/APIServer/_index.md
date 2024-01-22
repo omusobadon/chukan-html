@@ -18,6 +18,7 @@ outputs = ["Reveal"]
 ---
 
 #### APIサーバの動作イメージ
+
 <img src="kousei.png" width="100%">
 
 {{% /section %}}
@@ -50,16 +51,19 @@ outputs = ["Reveal"]
 ---
 
 #### ER図の概略  
+
 <img src="ER_gai.png" height="100%">
 
 ---
 
 #### リレーショナル例　概略
+
 <img src="relation_example1.png" height="100%">
 
 ---
 
 #### リレーショナル例
+
 <img src="relation_example2.png" height="100%">
 
 {{% /section %}}
@@ -81,6 +85,7 @@ outputs = ["Reveal"]
 - 例）  
 在庫情報の取得：/get_stock  
 注文を送信：/post_order
+
 <img src="kousei1.png" width="100%">
 
 ---
@@ -90,6 +95,7 @@ outputs = ["Reveal"]
 2. WebサーバがAPIサーバにリクエストを送信
 3. APIサーバがDBにアクセスして情報を取得
 4. 順にレスポンスを返す
+
 <img src="kousei2.png" width="100%">
 
 ---
@@ -98,6 +104,7 @@ outputs = ["Reveal"]
 1. ユーザが注文情報を送信
 2. WebサーバがAPIサーバにリクエストを送信
 3. APIサーバがDBとやりとりして注文できるか確認
+
 <img src="kousei3.png" width="100%">
 
 ---
@@ -105,6 +112,7 @@ outputs = ["Reveal"]
 ### 4-4. 注文結果のレスポンス
 1. 注文できる場合は注文情報を登録
 2. 順にレスポンスを返す
+
 <img src="kousei4.png" width="100%">
 
 {{% /section %}}
@@ -124,6 +132,7 @@ outputs = ["Reveal"]
 - /get にアクセスして商品情報を取得
 - 例）Stockテーブルの価格ID=1の情報を取得
 　　/get_stock?price_id=1
+
 <img src="get_example.png" width="60%">
 
 ---
@@ -160,11 +169,13 @@ outputs = ["Reveal"]
 ---
 
 #### 成功時  
+
 <img src="res_success1.png" width="50%"><img src="res_success2.png" width="50%">
 
 ---
 
 #### 失敗時
+
 <img src="res_failure.png" width="60%">
 
 {{% /section %}}
@@ -173,8 +184,6 @@ outputs = ["Reveal"]
 
 ### 6. 実演
 
-月曜日までに用意します
-
 ---
 
 ### 7. 制作を通じて
@@ -182,7 +191,3 @@ outputs = ["Reveal"]
 - システム開発について知れた
 - 汎用的な設計が難しい
 - フロント（Webサーバ）との連携が難しい
-
----
-
-ご清聴ありがとうございました
