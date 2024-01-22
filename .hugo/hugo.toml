@@ -12,3 +12,8 @@ unsafe = true
 baseName = "index"
 mediaType = "text/html"
 isHTML = true
+
+[[reveal_hugo.plugins]]
+name = "RevealMenu"
+source = "plugins/memu/menu.js"
+css = "plugins/memu/menu.css"
