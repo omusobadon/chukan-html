@@ -8,6 +8,7 @@ outputs = ["Reveal"]
 ### 予約の流れ
 <img src="Stream.png" />
 
+
 ---
 
 ## データの送受信
@@ -15,10 +16,10 @@ outputs = ["Reveal"]
 ---
 {{% section %}}
 ### バックエンドへデータ送信
-<img  src="json-post-all.png" />
+<img  src="json-post-all.png" class="popap"/>
 
 ---
-```cd
+```
 {
         "customer_id": 1,
         "start_at": "2024-01-23T10:00:00+09:00",
@@ -39,7 +40,7 @@ outputs = ["Reveal"]
 
 ### バックエンドからデータ受信
 
-<img src="json-get.png" />
+<img src="json-get-all.png" />
 
 ---
 
@@ -63,4 +64,5 @@ outputs = ["Reveal"]
 ---
 ## デモ画面の表示
 
- <!--実際に構築したのものを実践-->
+ ---
+## 質疑応答
