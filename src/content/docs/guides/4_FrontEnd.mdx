@@ -1,4 +1,55 @@
 ---
-title: "フロントエンドについて（Next.js）"
+title: "フロントエンドについて"
 description: "Next.jsについての説明です。"
 ---
+
+## 説明
+本研究では、レンタルカー店舗を想定としたサンプルページを制作した。\
+ユーザがアクセスするサイトと管理者がアクセスするサイトをそれぞれ作成して
+管理の汎用性を高めた。
+
+
+## 1. 環境構築方法
+### 1.1 Next.jsのインストール
+```shell
+    npx create-next-app@latest
+```
+### 1.2 環境変数ファイルの作成
+
+## 2. 送信処理
+### 2.1 
+```shell
+    export const PostOrder = async (orderpost: OrderPost): Promise<OrderPost> => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post_order`,{
+        method: "POST",
+        headers:{
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderpost),
+    });
+    const orderLog = res.json();
+    
+    return orderLog;
+}; 
+```
+## 2.2
+
+
+## 3. 受信処理
+
+```shell
+    export const PostOrder = async (orderpost: OrderPost): Promise<OrderPost> => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/post_order`,{
+        method: "POST",
+        headers:{
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderpost),
+    });
+    const orderLog = res.json();
+    
+    return orderLog;
+}; 
+```
+
+

@@ -18,7 +18,7 @@ outputs = ["Reveal"]
 
 ---
 
-#### APIサーバの動作イメージ
+APIサーバの動作イメージ
 
 <img src="str.png" width="100%">
 
@@ -52,19 +52,19 @@ outputs = ["Reveal"]
 
 ---
 
-#### ER図の概略  
+ER図の概略  
 
 <img src="ER_summary.png" height="100%">
 
 ---
 
-#### リレーショナル例　概略
+リレーショナル例　概略
 
 <img src="relation_example1.png" height="100%">
 
 ---
 
-#### リレーショナル例
+リレーショナル例
 
 <img src="relation_example2.png" height="100%">
 

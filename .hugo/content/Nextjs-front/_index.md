@@ -4,8 +4,11 @@ outputs = ["Reveal"]
 +++
 
 # フロントエンド開発
+
 ---
+
 ### 予約の流れ
+
 <img src="Stream.png" />
 
 
@@ -14,11 +17,15 @@ outputs = ["Reveal"]
 ## データの送受信
 
 ---
+
 {{% section %}}
+
 ### バックエンドへデータ送信
+
 <img  src="json-post-all.png" class="popap"/>
 
 ---
+
 ```
 {
         "customer_id": 1,
@@ -45,7 +52,9 @@ outputs = ["Reveal"]
 ---
 
 ## ユーザ登録
+
 ---
+
 ### ログイン画面
 
 <img src="login-main.png" />
@@ -57,12 +66,15 @@ outputs = ["Reveal"]
 <img src="Register.png" />
 
 ---
+
 ### ユーザ登録時の認証の流れ
 
 <img src="Omusobadon-Auth.png" />
 
 ---
+
 ## デモ画面の表示
 
- ---
+---
+
 ## 質疑応答
